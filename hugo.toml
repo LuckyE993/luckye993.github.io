@@ -1,0 +1,90 @@
+baseURL = 'https://你的用户名.github.io/'
+languageCode = 'zh-CN'
+title = 'qixuan'
+theme = 'PaperMod'
+
+# 分页设置
+pagination.pagerSize = 10
+
+[params]
+    # 基本信息
+    author = '你的名字'
+    description = '个人博客描述'
+    keywords = ['博客', '技术', '生活']
+    
+    # 主题设置
+    defaultTheme = 'auto'  # auto/light/dark
+    disableThemeToggle = false
+    
+    # 主页信息
+    [params.profileMode]
+        enabled = true
+        title = "你好，我是👋"
+        subtitle = "这里写你的简介，支持 **Markdown**"
+        imageUrl = "https://你的头像链接.jpg"
+        imageWidth = 120
+        imageHeight = 120
+    
+    # 社交链接
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/你的用户名"
+    [[params.socialIcons]]
+        name = "twitter"
+        url = "https://twitter.com/你的账号"
+    [[params.socialIcons]]
+        name = "email"
+        url = "mailto:your@email.com"
+    
+    # 文章设置
+    ShowReadingTime = true
+    ShowPostNavLinks = true
+    ShowBreadCrumbs = true
+    ShowCodeCopyButtons = true
+    ShowWordCount = true
+    ShowRssButtonInSectionTermList = true
+    
+    # 搜索
+    [params.fuseOpts]
+        isCaseSensitive = false
+        shouldSort = true
+        location = 0
+        distance = 1000
+        threshold = 0.4
+        minMatchCharLength = 0
+        keys = ["title", "permalink", "summary", "content"]
+
+# 菜单导航
+[[menu.main]]
+    identifier = 'home'
+    name = '首页'
+    url = '/'
+    weight = 10
+
+[[menu.main]]
+    identifier = 'archives'
+    name = '归档'
+    url = '/archives/'
+    weight = 20
+
+[[menu.main]]
+    identifier = 'tags'
+    name = '标签'
+    url = '/tags/'
+    weight = 30
+
+[[menu.main]]
+    identifier = 'search'
+    name = '搜索'
+    url = '/search/'
+    weight = 40
+
+[[menu.main]]
+    identifier = 'about'
+    name = '关于'
+    url = '/about/'
+    weight = 50
+
+# 输出格式（搜索功能需要）
+[outputs]
+    home = ['HTML', 'RSS', 'JSON']
