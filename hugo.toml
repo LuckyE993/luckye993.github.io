@@ -1,4 +1,4 @@
-baseURL = 'https://你的用户名.github.io/'
+baseURL = 'https://luckye993.github.io/'
 languageCode = 'zh-CN'
 title = 'qixuan'
 theme = 'PaperMod'
@@ -7,8 +7,9 @@ theme = 'PaperMod'
 pagination.pagerSize = 10
 
 [params]
+    mainSections = ["posts","notes"]
     # 基本信息
-    author = '你的名字'
+    author = 'Qixuan Sun'
     description = '个人博客描述'
     keywords = ['博客', '技术', '生活']
     
@@ -19,22 +20,22 @@ pagination.pagerSize = 10
     # 主页信息
     [params.profileMode]
         enabled = true
-        title = "你好，我是👋"
-        subtitle = "这里写你的简介，支持 **Markdown**"
-        imageUrl = "https://你的头像链接.jpg"
+        title = "你好，我是Qixuan Sun"
+        subtitle = "欢迎来到我的个人博客"
+        imageUrl = "https://avatars.githubusercontent.com/u/90081491?s=400&u=9d4a8de5407af89c493aac21f3b3c1f361783662&v=4"
         imageWidth = 120
         imageHeight = 120
     
     # 社交链接
     [[params.socialIcons]]
         name = "github"
-        url = "https://github.com/你的用户名"
+        url = "https://github.com/luckye993"
     [[params.socialIcons]]
         name = "twitter"
-        url = "https://twitter.com/你的账号"
+        url = "https://x.com/luckyeureka52"
     [[params.socialIcons]]
         name = "email"
-        url = "mailto:your@email.com"
+        url = "mailto:luckyeureka52@gmail.com"
     
     # 文章设置
     ShowReadingTime = true
@@ -62,28 +63,46 @@ pagination.pagerSize = 10
     weight = 10
 
 [[menu.main]]
-    identifier = 'archives'
-    name = '归档'
-    url = '/archives/'
+    identifier = 'posts'
+    name = '博客'
+    url = '/posts/'
     weight = 20
+
+[[menu.main]]
+    identifier = 'notes'
+    name = '笔记'
+    url = '/notes/'
+    weight = 30
+
+[[menu.main]]
+  identifier = "life"
+  name = "Life"
+  url = "/life/"
+  weight = 40
 
 [[menu.main]]
     identifier = 'tags'
     name = '标签'
     url = '/tags/'
-    weight = 30
+    weight = 50
 
 [[menu.main]]
     identifier = 'search'
     name = '搜索'
     url = '/search/'
-    weight = 40
+    weight = 60
+
+[[menu.main]]
+    identifier = 'archives'
+    name = '归档'
+    url = '/archives/'
+    weight = 70
 
 [[menu.main]]
     identifier = 'about'
     name = '关于'
     url = '/about/'
-    weight = 50
+    weight = 80
 
 # 输出格式（搜索功能需要）
 [outputs]

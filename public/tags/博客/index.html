@@ -8,7 +8,7 @@
 <title>博客 | qixuan</title>
 <meta name="keywords" content="">
 <meta name="description" content="个人博客描述">
-<meta name="author" content="你的名字">
+<meta name="author" content="Qixuan Sun">
 <link rel="canonical" href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.a29c24210eb31d9ce56f669c66a35c9c51b17376b7764e336a49af7dec914cf0.css" integrity="sha256-opwkIQ6zHZzlb2acZqNcnFGxc3a3dk4zakmvfeyRTPA=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
@@ -108,8 +108,18 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/archives/" title="归档">
-                    <span>归档</span>
+                <a href="http://localhost:1313/posts/" title="博客">
+                    <span>博客</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/notes/" title="笔记">
+                    <span>笔记</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/life/" title="Life">
+                    <span>Life</span>
                 </a>
             </li>
             <li>
@@ -120,6 +130,11 @@
             <li>
                 <a href="http://localhost:1313/search/" title="搜索 (Alt &#43; /)" accesskey=/>
                     <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
                 </a>
             </li>
             <li>
@@ -138,22 +153,20 @@
 </header>
 
 <article class="post-entry tag-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="https://example.com/image.jpg" alt="封面图">
-</figure>
   <header class="entry-header">
-    <h2 class="entry-hint-parent">我的第一篇博客
+    <h2 class="entry-hint-parent">Hugo 全面指南：从入门到进阶
     </h2>
   </header>
   <div class="entry-content">
-    <p>前言 这是我的第一篇 Hugo 博客文章！
-正文内容 Hugo 使用 Markdown 语法，非常简洁。
-代码示例 def hello(): print(&#34;Hello, Hugo!&#34;) 图片 引用 这是一段引用文字
-总结 感谢阅读！
-</p>
+    <p>Hugo：开启你的静态网站生成之旅 Hugo 是目前世界上最快的静态网站生成器（SSG），基于 Go 语言开发。它以极高的编译速度、强大的模板系统和简单的部署流程深受开发者喜爱。
+1. 核心概念 1.1 内容 (Content) Hugo的核心是 Markdown。你只需在 content/ 目录下编写 .md 文件，Hugo 就会根据模板自动将其转换为 HTML 页面。
+1.2 Front Matter 位于 Markdown 文件顶部的元数据，用于定义文章的标题、日期、标签、分类等。常见的格式有 TOML、YAML 和 JSON。
+title = &#34;我的第一篇博客&#34; date = 2026-02-03T12:00:00&#43;08:00 draft = false tags = [&#34;Hugo&#34;, &#34;Static Site&#34;] categories = [&#34;技术&#34;] 1.3 模板 (Templates) Hugo 使用 Go 的 html/template 库。它允许你通过逻辑控制（如 range、if）来动态渲染内容。
+2. 目录结构说明 archetypes/: 存放hugo new 时使用的内容模板。 assets/: 存储需要经过 Hugo Pipes 处理的资源（如 SCSS、JS、图片处理）。 content/: 存放所有的 Markdown 内容文件。 data/: 存放数据文件（YAML/JSON/TOML），可在模板中全局调用。 layouts/: 存放 HTML 布局模板。 static/: 存放不需要处理的静态资源（如图片、图标），构建时会直接复制到发布目录。 themes/: 存放下载或自定义的主题。 hugo.toml (或 config.toml): 整个站点的全局配置文件。 3. 常用 CLI 命令 hugo server -D: 启动本地预览服务器（包含草稿）。 hugo new posts/my-article.md: 在指定位置创建一篇新文章。 hugo: 编译整个站点，生成的静态文件会存放于 public/ 目录。 hugo list drafts: 列出所有草稿。 4. 短代码 (Shortcodes) Shortcodes 是 Hugo 提供的特殊标签，用于在 Markdown 中插入复杂的 HTML。
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-01-15 10:00:00 +0800 CST'>January 15, 2024</span>&nbsp;·&nbsp;<span>你的名字</span></footer>
-  <a class="entry-link" aria-label="post link to 我的第一篇博客" href="http://localhost:1313/posts/hello-world/"></a>
+  <footer class="entry-footer"><span title='2026-02-03 12:12:42 +0800 CST'>February 3, 2026</span>&nbsp;·&nbsp;<span>Qixuan Sun</span></footer>
+  <a class="entry-link" aria-label="post link to Hugo 全面指南：从入门到进阶" href="http://localhost:1313/posts/2026-02-03-hugo/"></a>
 </article>
     </main>
     

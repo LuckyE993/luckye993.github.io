@@ -6,14 +6,47 @@
     <description>Recent content in 博客 on qixuan</description>
     <generator>Hugo -- 0.155.1</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 15 Jan 2024 10:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Feb 2026 12:12:42 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>我的第一篇博客</title>
-      <link>http://localhost:1313/posts/hello-world/</link>
-      <pubDate>Mon, 15 Jan 2024 10:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/hello-world/</guid>
-      <description>这是文章的简短描述</description>
+      <title>Hugo 全面指南：从入门到进阶</title>
+      <link>http://localhost:1313/posts/2026-02-03-hugo/</link>
+      <pubDate>Tue, 03 Feb 2026 12:12:42 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-03-hugo/</guid>
+      <description>&lt;h1 id=&#34;hugo开启你的静态网站生成之旅&#34;&gt;Hugo：开启你的静态网站生成之旅&lt;/h1&gt;
+&lt;p&gt;Hugo 是目前世界上最快的静态网站生成器（SSG），基于 Go 语言开发。它以极高的编译速度、强大的模板系统和简单的部署流程深受开发者喜爱。&lt;/p&gt;
+&lt;h2 id=&#34;1-核心概念&#34;&gt;1. 核心概念&lt;/h2&gt;
+&lt;h3 id=&#34;11-内容-content&#34;&gt;1.1 内容 (Content)&lt;/h3&gt;
+&lt;p&gt;Hugo的核心是 Markdown。你只需在 &lt;code&gt;content/&lt;/code&gt; 目录下编写 &lt;code&gt;.md&lt;/code&gt; 文件，Hugo 就会根据模板自动将其转换为 HTML 页面。&lt;/p&gt;
+&lt;h3 id=&#34;12-front-matter&#34;&gt;1.2 Front Matter&lt;/h3&gt;
+&lt;p&gt;位于 Markdown 文件顶部的元数据，用于定义文章的标题、日期、标签、分类等。常见的格式有 TOML、YAML 和 JSON。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;我的第一篇博客&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;date&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;2026-02-03T12:00:00+08:00&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;draft&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;tags&lt;/span&gt; = [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hugo&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Static Site&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;categories&lt;/span&gt; = [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;技术&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;13-模板-templates&#34;&gt;1.3 模板 (Templates)&lt;/h3&gt;
+&lt;p&gt;Hugo 使用 Go 的 &lt;code&gt;html/template&lt;/code&gt; 库。它允许你通过逻辑控制（如 &lt;code&gt;range&lt;/code&gt;、&lt;code&gt;if&lt;/code&gt;）来动态渲染内容。&lt;/p&gt;
+&lt;h2 id=&#34;2-目录结构说明&#34;&gt;2. 目录结构说明&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;archetypes/&lt;/code&gt;: 存放&lt;code&gt;hugo new&lt;/code&gt; 时使用的内容模板。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;assets/&lt;/code&gt;: 存储需要经过 Hugo Pipes 处理的资源（如 SCSS、JS、图片处理）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;content/&lt;/code&gt;: 存放所有的 Markdown 内容文件。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;data/&lt;/code&gt;: 存放数据文件（YAML/JSON/TOML），可在模板中全局调用。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;layouts/&lt;/code&gt;: 存放 HTML 布局模板。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;static/&lt;/code&gt;: 存放不需要处理的静态资源（如图片、图标），构建时会直接复制到发布目录。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;themes/&lt;/code&gt;: 存放下载或自定义的主题。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hugo.toml&lt;/code&gt; (或 &lt;code&gt;config.toml&lt;/code&gt;): 整个站点的全局配置文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-常用-cli-命令&#34;&gt;3. 常用 CLI 命令&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;hugo server -D&lt;/code&gt;: 启动本地预览服务器（包含草稿）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hugo new posts/my-article.md&lt;/code&gt;: 在指定位置创建一篇新文章。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hugo&lt;/code&gt;: 编译整个站点，生成的静态文件会存放于 &lt;code&gt;public/&lt;/code&gt; 目录。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hugo list drafts&lt;/code&gt;: 列出所有草稿。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-短代码-shortcodes&#34;&gt;4. 短代码 (Shortcodes)&lt;/h2&gt;
+&lt;p&gt;Shortcodes 是 Hugo 提供的特殊标签，用于在 Markdown 中插入复杂的 HTML。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
